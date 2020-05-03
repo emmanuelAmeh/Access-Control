@@ -73,6 +73,14 @@ public class AddEditVisitor extends AppCompatActivity {
             int access = intent.getIntExtra(EXTRA_ACCESS_CODE, -1);
             mTvAccessCode.setText(String.valueOf(access));
 
+            //buttons control
+            long timeLoggedIn = intent.getLongExtra(EXTRA_TIME_LOGGED_IN, 10L);
+            if (timeLoggedIn > 100L) {
+                btnDelete.setEnabled(false);
+                btnSubmit.setEnabled(false);
+            }
+
+
             btnDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -198,7 +206,7 @@ public class AddEditVisitor extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.add_visitor_menu, menu);
+        //inflater.inflate(R.menu.add_visitor_menu, menu);
         return true;
     }
 
