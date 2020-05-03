@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="8dp"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Visitor"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorPrimaryDark"
+            tool:layout_constraintStart_toStartOf="parent"
+            tool:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/visitor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Emmanuel Ameh"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tool:layout_constraintStart_toEndOf="@+id/time"
+            tool:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Time Requested:"
+            android:textColor="@color/colorPrimaryDark"
+            tool:layout_constraintStart_toStartOf="parent"
+            tool:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/time_generated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            tool:layout_constraintStart_toStartOf="@+id/visitor_name"
+            tool:layout_constraintTop_toBottomOf="@+id/visitor_name" />
+
+        <TextView
+            android:id="@+id/code_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Access Code:"
+            android:textColor="@color/colorPrimaryDark"
+            tool:layout_constraintStart_toStartOf="parent"
+            tool:layout_constraintTop_toBottomOf="@+id/time" />
+
+        <TextView
+            android:id="@+id/code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            tool:layout_constraintStart_toStartOf="@+id/visitor_name"
+            tool:layout_constraintTop_toBottomOf="@+id/time_generated" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Status:"
+            android:textColor="@color/colorPrimaryDark"
+            tool:layout_constraintStart_toStartOf="parent"
+            tool:layout_constraintTop_toBottomOf="@+id/code_item" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="-"
+            tool:layout_constraintStart_toStartOf="@+id/code"
+            tool:layout_constraintTop_toBottomOf="@+id/code" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
