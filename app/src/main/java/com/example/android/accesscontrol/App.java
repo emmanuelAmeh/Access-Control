@@ -5,6 +5,9 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.os.Build;
 
+/*
+ * This class creates the Notification channels to be used for this app*/
+
 public class App extends Application {
 
     public static final String CHANNEL_1_ID = "Channel 1";
